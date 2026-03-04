@@ -18,9 +18,20 @@ def exercise1():
 		"edad":edad,
 		"activo":activo}
 
+@app.get("/exercise2")
+def exercise2(a:int=0,mb:int=0):
+	return{"exercise":2,"resultado":a+b}
+
+
 @app.get("/exercise3")
 def exercise3(num:int):
 	return{"exercise":3,"numero":num,"es par": num %2==0}
+
+@app.get("/exercise4")
+def exercise4():
+	lista[1,2,3,4,5]
+	recorrido=[n for lista]
+	return{"exercise":4,"lista":recorrido}
 
 
 @app.get("/exercise5")
