@@ -2,7 +2,14 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import json
 
-app= FastAPI()
+app= FastAPI(
+	title="API de Programación Agéntica - EPII Diurno",
+        description="Elaborado por Fabian de la cruz",
+        version="1.0.0.",
+        contact={
+                "name": "Fabian de la cruz perez",
+                "email": "fjdelacruzp22@ul.edu.co",
+        })
 
 @app.get("/")
 def initialEndpoint():
@@ -30,7 +37,7 @@ def exercise3(num:int):
 @app.get("/exercise4")
 def exercise4():
 	lista[1,2,3,4,5]
-	recorrido=[n for lista]
+	recorrido=[n for n in lista]
 	return{"exercise":4,"lista":recorrido}
 
 
